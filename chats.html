@@ -1,0 +1,117 @@
+<!-- 요즘은 웹 서버가 디폴트로 index.html를 찾아보게 되어 있음.-->
+<!-- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats - Tottenham Talk</title>
+</head>
+<body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>99:99</span>
+      </div>
+      <div class="status-bar__column">
+        <span>150%</span>
+        <i class="fas fa-car-battery"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+        <h1 class="screen-header__title">Chats</h1>
+        <div class="screen-header__icons">
+            <span><i class="fas fa-search fa-lg"></i></span>
+            <span><i class="far fa-comment-dots fa-lg"></i></span>
+            <span><i class="fas fa-music fa-lg"></i></span>
+            <span><i class="fas fa-cog fa-lg"></i></span>
+        </div>
+    </header>
+
+    <a href="chat.html">
+      <main class="main-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img 
+          src="https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/7XRDRX6XDS7OZOUNPGDP6H7RTQ.png"
+          class="user-component__avatar user-component__avatar--xs"
+          />
+        <div class="user-component__text">
+          <h4 class="user-component__title">Mourinho</h4>
+          <h4 class="user-component__subtitle">I hope you don't go Real Madrid! ♥</h4>
+        </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">22:22</span>
+          <div class="bedge">2</div>
+        </div>
+      </div>
+      </main>
+    </a>
+    <!-- <div class="user-component">
+      <div class="user-component__column">
+        <img 
+          src="https://img.huffingtonpost.com/asset/5b98836b190000350e503ede.jpeg?ops=crop_17_95_703_499,scalefit_630_noupscale"
+          class="user-component__avatar user-component__avatar--xs"
+        />
+        <div class="user-component__text">
+          <h4 class="user-component__title">Father</h4>
+          <h4 class="user-component__subtitle">The training tomorrow will start at 6:00.</h4>
+        </div>
+        </div>
+    </div> -->    
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__btn">
+              <a class="nav__link" href="friends.html">
+                <i class="far fa-user fa-2x"></i>
+              </a>
+            </li>
+            <li class="nav__btn">
+              <a class="nav__link" href="chats.html">
+                <span class="nav__noti bedge">2</span>  
+                <i class="fas fa-comment fa-2x"></i>
+              </a>
+            </li>
+            <li class="nav__btn">
+              <a class="nav__link" href="find.html"><i class="fas fa-search fa-2x"></i>
+              </a>
+            </li>
+            <li class="nav__btn">
+              <a class="nav__link" href="more.html">
+                <span class="nav__noti__ellipsis"></span>
+                <i class="fas fa-ellipsis-h fa-2x"></i>
+              </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="no-mobile">
+      <span>Your screen is too big!</span>
+    </div>
+
+    <script src="https://kit.fontawesome.com/422d010fca.js" crossorigin="anonymous">
+    </script>
+</body>
+</html>
+
+<!--BTN _ block element modifier -->
+ <!-- .btn, .btn__price, btn--big -->
+ <!-- class별 관계를 쉽게 알 수 있는 방식-->
+ <!-- Class가 커질때를 고려해서 실제 코드를 어떻게 짜는지 계속 접하는게 중요함 -->
+
+ <!-- IMG 추출 : heroicons
+폰트사이트: fontawesome-->
+
+<!--script는 항상 맨 뒤에 있어야해! body 안의 맨 뒤-->
+
+<!-- css 넣을때는 link:css 누르고 엔터 누르면 기본 틀 끌고 옴-->
+
+<!-- google font 에서 검색해서 글자 찾아 html추가 또는 css추가 선택 가능-->

@@ -1,0 +1,215 @@
+#chat-screen {
+    background-color: rgb(106, 134, 219);
+    height: 500vh;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(106, 134, 219);
+    top: 0;
+}
+
+#chat-screen .status-bar {
+    z-index: 2;
+}
+  /* Z-index 값이 높은애가 낮은 애 위에 오게 되어있음. layer 번호라고 생각하면 됨 */
+#chat-screen .alt-header {
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.main-chat {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s linear ;
+}
+
+
+
+.chat__timestamp {
+    background-color: rgb(189, 189, 189);
+    color: var(--tottenham-blue);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.messege-row {
+    display: flex;
+    width: 100%;
+}
+
+.messege-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-bottom: 25px;
+}
+
+.messege__author {
+    opacity: 0.6;    
+    margin-bottom: 8px;
+    display: block; /*margin collapse 떄문에 블록으로 만들어 준 것 같은데? flex는 높이 없어서 그런가? 복습 필요 */
+}
+
+.messege__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.messege__bubble {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+}
+
+.messege__time {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.messege-row--own {
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.messege-row--own .messege__bubble {
+    background-color: rgb(241, 243, 117);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+ /* Order 명령으로 Flex의 순서 바꿔줄 수 있다. flex의 children만 가능하다! 
+
+.messege-row--own .messege__bubble {
+    order: 1;
+}
+
+.messege-row--own .messege__time {
+    order: 0;
+} */
+
+ /* 두 번째 방법. */
+.messege-row--own .messege__info {
+    flex-direction: row-reverse
+}
+
+.reply {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    align-items: center;    
+}
+.reply .reply__column:first-child {
+    width: 10%;
+}
+
+.reply .reply__column:last-child {
+    width: 90%;
+    position: relative;
+}
+
+.reply input {
+    padding: 0 15px;
+    height: 30px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.reply__column:last-child > i {
+    right: 40px;
+    top: 8px;
+}
+
+.reply__column button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+    outline: none;
+}
+
+.reply i {
+    opacity: 0.5;
+}
+
+.reply__column button i {
+    opacity: 1;
+}
+
+.reply:focus-within .reply__column:first-child {
+    display: none;
+}
+
+.reply:focus-within .fa-grin-wink,
+.reply:focus-within button {
+    opacity: 0;
+}
+
+.reply:focus-within input {
+    
+    transform: translatex(-1%);
+}
+
+
+/*
+.reply .reply__column:first-child {
+    width: 10%;
+}
+
+.reply .reply__column:last-child {
+    width: 90%;
+}
+
+.reply input {
+    height: 30px;
+    width: 100%;  -> reply__column이 width를 갖지 않고 있으면 이 명령어가 안먹음 
+    border-color: var(--main-border);
+    border-radius: 20px;
+}
+*
+.reply__column:last-child > i,
+.reply__column:last-child button {
+    position: relative;
+    right: 0;
+    top: 10px;
+} */

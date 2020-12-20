@@ -1,0 +1,7 @@
+:root {
+    --tottenham-blue: rgb(34, 17, 112);
+    --background-gray: #F1F1F1;
+    --horizontal-space: 25px;  
+    --main-border: 0.5px solid rgba(0, 0, 0, 0.2);
+} /*띄어쓰기는 -로 연결하자 좀 ㅡㅡ*/
+

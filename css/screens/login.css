@@ -1,0 +1,81 @@
+/*.welcome__img {
+    display: flex;
+    margin: 20px;
+    width: 75%;
+    height: 75%;
+}*/
+.welcome-header {
+    margin-top: 140px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.welcome-header__text {
+    font-size: 15px;
+    width: 80%;
+    opacity: 70%;
+    margin-bottom: 100px;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+}
+#login-form input {
+    padding: 15px 1px;
+    font-size: 13px;
+    border: none;    
+    margin-bottom: 10px;    
+}
+#login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+} /* 로그인창 안에 문구 회색으로 */
+
+/* .logiin-form_input {
+
+}
+.login-form__btn {
+    
+}
+ .login-form__a {
+
+ } */
+
+#login-form input:not([type="submit"]){
+    border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
+    transition: border-color 0.7s ease-in-out;
+}
+#login-form input:focus {
+    border-color: var(--tottenham-blue);
+} /*띄어쓰기는 - 로 연결해줘야되네 ㅡㅡ */
+ /*CSS는 뒤에 명령을 마지막으로 받으니까
+ submit 아닌거에 색깔 적용되는게 첫번째
+ focus했을 때 파란색 밑줄 나오는게 두번째가 되게 해줘야 올바르게 작동함 */
+
+#login-form input[type="submit"] {
+    background-color:var(--tottenham-blue);
+    color:gray;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 5px;
+}
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    margin-top: 10px;
+    font-size: small;
+} /*inherit는 부모 컬러 그대로 가져옴(이경우 a 앞에 있는 login-form)
+
+
+/* reset CSS : margin, padding, border 모두 0 적용해주는 애 */
+/* 이미지파일 px 측정 : 크롬 확장프로그램 page ruler redux
+/* css파일에 root로 공통변수 넣어준 경우(variables.css)
+  css파일을 꼭 import 해줘야 쓸 수 있음!!
+
+  /* not속성_ 뭔가 적용되기 원하지 않을 때.

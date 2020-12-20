@@ -1,0 +1,40 @@
+.more-margin {
+    margin-top: 35px;
+}
+
+.more-sugesstions {
+    margin-top: 50px;
+    border-top: var(--main-border);
+    padding-top: 40px;
+}
+
+.more-suggestions__title {
+    margin-bottom: 30px;
+}
+
+.more-sugesstions__icons {
+    display: flex;
+}
+
+.more-sugesstions__icon {
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*세로로 가운데 정렬 시키는 공식임. flex에서 flex-direction column으로. 주축이 된 보조축(align) center로*/
+}
+
+.more-sugesstions__icon-image {
+    width: 60px;
+    height: 60px;
+    background-color: var(--tottenham-blue);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.more-sugesstions__icon-image i {
+    font-size: 25px;
+}
